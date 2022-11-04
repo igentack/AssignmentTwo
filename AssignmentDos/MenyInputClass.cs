@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AssignmentTwo;
 
 namespace AssignmentDos
 {
@@ -24,10 +20,7 @@ namespace AssignmentDos
 
         public static void TicketPurchases()
         {
-            // To const
-            string youth = "Ungdomspris: 80kr";
-            string oldAge = "Pensionärsprisspris: 90kr";
-            string standardAge = "Standardpris: 120kr";
+
             bool ticketloop = true;
             
             do
@@ -41,17 +34,17 @@ namespace AssignmentDos
                 {
                     if (intAge < 20)
                     {
-                        CostInfo(youth, ticketloop);
+                        CostInfo(MenyOutputClass.FixedOutput.Youth, ticketloop);
                         break;
                     }
                     else if (intAge > 64)
                     {
-                        CostInfo(oldAge, ticketloop);
+                        CostInfo(MenyOutputClass.FixedOutput.OldAge, ticketloop);
                         break;
                     }
                     else if (intAge > 20 && intAge < 65)
                     {
-                        CostInfo(standardAge, ticketloop);
+                        CostInfo(MenyOutputClass.FixedOutput.StandardAge, ticketloop);
                         break;
                     }
                 }
@@ -62,6 +55,7 @@ namespace AssignmentDos
                     continue;
                 }               
             } while (true);
+
         }
         public string CostOutput { get; set; }
         public bool LoopBool { get; set; }
