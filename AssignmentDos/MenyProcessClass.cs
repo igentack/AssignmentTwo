@@ -9,5 +9,9 @@ namespace AssignmentTwo
 {
     internal class MenyProcessClass
     {
+/*        internal static void PrintFoorLoop()
+        {
+            throw new NotImplementedException();
+        }*/
     }
 }

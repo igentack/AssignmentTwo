@@ -4,18 +4,20 @@ namespace AssignmentDos
 {
     internal class MenyInputClass
     {
-        public static void MenyText()
+        public static string MenyText()
         {
             Console.WriteLine("---------------------------");
             Console.WriteLine("  Välkommen till Biomenyn  ");
             Console.WriteLine("---------------------------");
             Console.WriteLine();
             Console.WriteLine("1: Boka en biljett");
-            Console.WriteLine("2: Se aktuellt saldo");
+            Console.WriteLine("2: Ordleken");
+            Console.WriteLine("3: Se aktuellt saldo");
             Console.WriteLine("0: Avsluta");
             Console.WriteLine();
             Console.Write("Skriv ert val: ");
-            Console.ReadLine();
+            string menyChoice = Console.ReadLine();
+            return menyChoice;
         }
 
         public static void TicketPurchases()
@@ -66,6 +68,17 @@ namespace AssignmentDos
             Console.WriteLine();
             Console.WriteLine(" - Biljett tillagd -");
             loopBool = true;
-        } 
+        }
+
+        internal static void PrintFoorLoop()
+        {
+            Console.WriteLine();
+            Console.Write("Skriv ett ord: ");
+            string word = Console.ReadLine();
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write($"{word} ");
+            }
+        }
     }
 }
